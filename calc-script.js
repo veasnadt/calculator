@@ -59,8 +59,12 @@ buttons.forEach(function(button) {
             display.insertBefore(input, display.firstChild);
             output.value = calculate(input.value);
         }
-        else if (button.classList.contains('allclear')) {
-            display.removeChild(input);
+        else if (button.classList.contains('allclear') || 
+                (button.classList.contains('clear') && 
+                display.firstChild.id === 'calc-input')) {
+            if (display.firstChild.id === 'calc-input') {
+                display.removeChild(display.firstChild);
+            }
             input.value = '';
             output.value = '';
         }
