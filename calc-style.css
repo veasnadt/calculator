@@ -12,6 +12,7 @@ body {
 
 .container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -111,4 +112,18 @@ body {
     .btn:last-child {
         max-width: 150px;
     }
+}
+
+#credits {
+    color: #fff;
+    margin-top: 40px;
+}
+
+#credits a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#credits a:hover {
+    text-decoration: underline;
 }
