@@ -7,7 +7,7 @@
 body {
     background-color: #8b0000;
     margin: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Helvetica', sans-serif;
 }
 
 .container {
@@ -15,42 +15,56 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    flex-direction: column;
 }
 
 .calculator {
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     background-color: #0d0d0d;
     border-radius: 25px;
     padding: 25px 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    max-width: 25%;
+    width: 90%;
+    max-width: 400px;
 }
 
 .display {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 95%;
+    flex-direction: column;
+    width: 100%;
     height: 100px;
     background-color: #1d1d1d;
     border-radius: 25px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
-.display > input {
+.display #calc-input {
     background-color: transparent;
     width: 100%;
     height: 100%;
     border: 0;
-    font-size: 2rem;
+    font-size: 1.2rem;
     text-align: right;
-    padding: 0 10px;
-    border-radius: 25px;
+    padding: 0 20px;
+    color: #939393;
+    letter-spacing: 1px;
+    background-color: transparent;
+}
+
+.display #calc-output {
+    background-color: transparent;
+    border: 0;
+    text-align: right;
+    padding: 0 20px;
+    width: 100%;
+    height: 100%;
+    font-size: 2rem;
+    color: #fff;
 }
 
 .buttons {
@@ -60,14 +74,6 @@ body {
     gap: 10px;
 }
 
-.buttons > div {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 0;
-    border: 0;
-}
-
 .btn {
     display: flex;
     justify-content: center;
@@ -75,17 +81,33 @@ body {
     cursor: pointer;
     font-size: 1.5rem;
     border: none;
-    border-radius: 50px;;
+    border-radius: 25px;
     background-color: #434343;
     color: #fff;
-    padding: 20px;
-    transition: var(--background-color) 0.3s;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    width: 100px;
-    height: 100px;
-    margin: 0;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    flex: 1 1 calc(25% - 10px); 
+    max-width: 90px;
+    height: 90px;
 }
 
 .btn:last-child {
-    width: calc(200px + 10px);
+    flex: 1 1 calc(50% - 10px);
+    max-width: 190px;
+}
+
+.btn:hover {
+    background-color: #333;
+}
+
+@media (max-width: 600px) {
+    .btn {
+        font-size: 1rem;
+        height: 70px;
+        max-width: 70px;
+    }
+
+    .btn:last-child {
+        max-width: 150px;
+    }
 }

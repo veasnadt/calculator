@@ -5,34 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="calc-style.css">
-    <script src="calc-script.js"></script>
+    <script src="calc-script.js" defer></script>
 </head>
 <body>
     <div class="container">
         <div class="calculator">
             <div class="display">
-                <input type="text" id="display" disabled>
+                <input type="text" id="calc-input" disabled>
+                <input type="text" id="calc-output" disabled>
             </div>
             <div class="buttons">
-                <button class="btn" value="AC" onclick="clearDisplay()">AC</button>
-                <button class="btn" value="C" onclick="deleteChar()">C</button>
-                <button class="btn" value="%" onclick="appendChar('%')">%</button>
-                <button class="btn" value="/" onclick="appendChar('/')">/</button>
-                <button class="btn" value="7" onclick="appendChar('7')">7</button>
-                <button class="btn" value="8" onclick="appendChar('8')">8</button>
-                <button class="btn" value="9" onclick="appendChar('9')">9</button>
-                <button class="btn" value="*" onclick="appendChar('*')">*</button>
-                <button class="btn" value="4" onclick="appendChar('4')">4</button>
-                <button class="btn" value="5" onclick="appendChar('5')">5</button>
-                <button class="btn" value="6" onclick="appendChar('6')">6</button>
-                <button class="btn" value="-" onclick="appendChar('-')">-</button>
-                <button class="btn" value="1" onclick="appendChar('1')">1</button>
-                <button class="btn" value="2" onclick="appendChar('2')">2</button>
-                <button class="btn" value="3" onclick="appendChar('3')">3</button>
-                <button class="btn" value="+" onclick="appendChar('+')">+</button>
-                <button class="btn" value="0" onclick="appendChar('0')">0</button>
-                <button class="btn" value="." onclick="appendChar('.')">.</button>
-                <button class="btn" id="equal-btn" value="=" onclick="calculate()">=</button>
+                <button class="btn allclear" value="AC">AC</button>
+                <button class="btn clear" value="C">C</button>
+                <button class="btn operator" value="%">%</button>
+                <button class="btn operator" value="/">/</button>
+                <button class="btn number" value="7">7</button>
+                <button class="btn number" value="8">8</button>
+                <button class="btn number" value="9">9</button>
+                <button class="btn operator" value="*">*</button>
+                <button class="btn number" value="4">4</button>
+                <button class="btn number" value="5">5</button>
+                <button class="btn number" value="6">6</button>
+                <button class="btn operator" value="-">-</button>
+                <button class="btn number" value="1">1</button>
+                <button class="btn number" value="2">2</button>
+                <button class="btn number" value="3">3</button>
+                <button class="btn operator" value="+">+</button>
+                <button class="btn number" value="0">0</button>
+                <button class="btn decimal" value=".">.</button>
+                <button class="btn equal" value="=">=</button>
             </div>
         </div>
     </div>
